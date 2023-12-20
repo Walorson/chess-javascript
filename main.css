@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+.board {
+    position: relative;
+    height: 640px;
+    width: 640px;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    transform: rotateZ(180deg) scaleX(-1);
+} 
+.board img {  
+    display: block; 
+    width: 80px; 
+    height: 80px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.figure {
+    position: absolute;
+    top: 0; left: 0;
+    transform: rotateZ(180deg);
+}
+.info {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.circle {
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 15px;
+    user-select: none;
+}
+.text {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    font-size: 4rem;
+    text-shadow: 0px 0px 10px rgba(10,10,10, 1);
+    display: flex;
+    flex-direction: column;
+}
+.freeze {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    background-color: black;
+    opacity: 0.2;
+}
+button {
+    padding: 10px 0;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
